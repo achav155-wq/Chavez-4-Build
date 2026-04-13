@@ -1,3 +1,69 @@
 /* CSS written by Alex Chavez */
 
+
 /* GLOBAL STYLES (MOBILE FIRST) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: greenyellow;
+}
+
+/* GRID LAYOUT */
+body {
+    display: grid;
+    grid-template-areas: 
+    "header" 
+    "main" 
+    "footer";
+}
+
+/* HEADER */
+header {
+
+}
+
+/* NAV */
+.nav-links {
+
+}
+
+.nav-links a {
+
+}
+
+/* MAIN */
+main {
+
+}
+section {
+
+}
+
+/* CARD LAYOUT */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: ;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*FOOTER*/
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 1rem;
+    background-color: green;
+    color: white;
+}
+
