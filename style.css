@@ -19,24 +19,35 @@ body {
 
 /* HEADER */
 header {
-
+    grid-area: header;
+    background-color: green;
+    color:aliceblue;
+    padding: 1rem;
+    text-align: center;
 }
 
 /* NAV */
 .nav-links {
-
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .nav-links a {
-
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* MAIN */
 main {
-
+    grid-area: main;
+    padding: 1rem;
 }
 section {
-
+    margin-bottom: 2rem;
 }
 
 /* CARD LAYOUT */
@@ -50,11 +61,13 @@ section {
     background: white;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: ;
+    box-shadow: 0 4px 6px gray;
+    text-align: center;
 }
 
 .card img {
     width: 100%;
+    height:45%;
     border-radius: 10px;
 }
 
@@ -67,3 +80,40 @@ footer {
     color: white;
 }
 
+@media screen and (min-width:800px) {
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex:1 1 45%;
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+
+    body {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer"
+    }
+
+    .card {
+        flex: 1 1 25%;
+    }
+    
+    main {
+        max-width: 1000px;
+        margin: auto;
+    }
+}
